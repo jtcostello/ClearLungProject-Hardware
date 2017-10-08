@@ -1,4 +1,4 @@
-# ClearLungProject-Hardware
+# Clear Lung Project - Hardware Subteam
 *This readme is currently unfinished.*
 <br>
 ## Project Overview
