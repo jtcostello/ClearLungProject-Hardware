@@ -1,8 +1,9 @@
 # ClearLungProject-Hardware
 *This readme is currently unfinished.*
+<br>
+## Project Overview
 
-
-
+<br><br>
 ## How to get started with this Code:
 ### 1. Download (and install) the Arduino IDE
 https://www.arduino.cc/en/Main/Software
@@ -14,7 +15,7 @@ Choose one of the following options:
 ### 3. Clone this Repo
 
 
-
+<br><br>
 ## How to use this Repo (after getting started)
 ### Pull the Current Code
 
