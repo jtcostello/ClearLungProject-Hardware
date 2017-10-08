@@ -4,7 +4,7 @@
 ## Project Overview
 
 <br><br>
-## How to get started with this Code:
+## How to get started
 ### 1. Download (and install) the Arduino IDE
 - https://www.arduino.cc/en/Main/Software
 ### 2. Install Git
@@ -16,7 +16,7 @@ Choose one of the following options:
 
 
 <br><br>
-## How to use this Repo (after getting started)
+## How to use this repo
 ### Pull the Current Code
 
 ### Edit in Arduino IDE
