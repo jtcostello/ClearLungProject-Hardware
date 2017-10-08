@@ -6,7 +6,7 @@
 <br><br>
 ## How to get started with this Code:
 ### 1. Download (and install) the Arduino IDE
-https://www.arduino.cc/en/Main/Software
+- https://www.arduino.cc/en/Main/Software
 ### 2. Install Git
 Choose one of the following options:
 - [Instructions for *Windows*](https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-linux-md)
