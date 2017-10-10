@@ -13,7 +13,8 @@ Choose one of the following options:
 - [Instructions for *Mac*](https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-mac-md)
 - [Instructions for *Linux*](https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-linux-md)
 ### 3. Clone this Repo
-
+- Click the green "Clone or Download" button above
+- Download zip file (or use git)
 
 <br><br>
 ## How to use this repo
