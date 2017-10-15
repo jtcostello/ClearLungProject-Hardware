@@ -27,6 +27,8 @@ Choose one of the following options:
 
 <br><br>
 ## Wire Connections between Teensy and Raspi
+For getting started we used https://oscarliang.com/raspberry-pi-arduino-connected-i2c/.
+See `raspiTeensyI2C_test` for testing code. 
 ### Teensy Pinout
 ![Teensy Pinout](https://github.com/jtcostello/ClearLungProject-Hardware/blob/master/ReferenceDocs/teensy3.2pinout.png)
 ### Raspi Pinout
