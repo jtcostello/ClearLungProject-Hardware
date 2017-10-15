@@ -1,5 +1,12 @@
+// 10-15-2017
+// Teensy reads in audio from pin A0
+// Ouputs audio data on I2C to raspi
+// based on '_2_ADCclass_audioread.ino'
+
 
 #include <ADC.h>
+#include <Wire.h>
+
 
 const int micPin = A0;
 
@@ -17,22 +24,35 @@ int lastTime = 0;
 long value = 0;
 
 
-
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
 void setup() {
+  // setup raspi communication
+  pinMode(13, OUTPUT);
+  Serial.begin(9600); // start serial for output
+  Wire.begin(SLAVE_ADDRESS); // initialize i2c as slave
+  Wire.onReceive(receiveData);
+  Wire.onRequest(sendData);
+  
+  // setup ADC to read audio
   adc->setAveraging(1); // set number of averages
   adc->setResolution(16); // set bits of resolution
   adc->setConversionSpeed(ADC_MED_SPEED); // change the conversion speed
   // it can be ADC_VERY_LOW_SPEED, ADC_LOW_SPEED, ADC_MED_SPEED, ADC_HIGH_SPEED or ADC_VERY_HIGH_SPEED
   adc->setSamplingSpeed(ADC_HIGH_SPEED); // change the sampling speed
 
+
+  // start recording and sending out
   Serial.begin(115200);
   adc->startContinuous(micPin);
-  // setup a timer to make measurements - delay is in 
+  // setup a timer to make measurements - delay is in microseconds
   myTimer.begin(getinput, 22.67);
 
-  
 }
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
 void getinput(void) {
   value = adc->analogReadContinuous();
@@ -45,14 +65,17 @@ void getinput(void) {
 
 
 void sendData(long sendVal) {
-  
+  Wire.write(sendVal);
+}
+
+void receiveData(int byteCount) {
+  // todo
 }
 
 
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
-
-// at 16bits, HIGH_SPEED for both conversion and sampling, we get about 380k samples/second
-// however, speed settings doesn't change this when using continuousread
 void loop() {
   // every second
   if (millis()-lastTime > 999) {
@@ -62,9 +85,8 @@ void loop() {
     lastTime= millis();
   } 
 }
-
-
-
+// at 16bits, HIGH_SPEED for both conversion and sampling, we get about 380k samples/second
+// however, speed settings doesn't change this when using continuousread
 
 
 
