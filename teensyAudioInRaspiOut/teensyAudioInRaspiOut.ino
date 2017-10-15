@@ -7,7 +7,7 @@
 #include <ADC.h>
 #include <Wire.h>
 
-
+#define SLAVE_ADDRESS 0x04
 const int micPin = A0;
 
 // Create an IntervalTimer object 
@@ -29,8 +29,6 @@ long value = 0;
 
 void setup() {
   // setup raspi communication
-  pinMode(13, OUTPUT);
-  Serial.begin(9600); // start serial for output
   Wire.begin(SLAVE_ADDRESS); // initialize i2c as slave
   Wire.onReceive(receiveData);
   Wire.onRequest(sendData);
@@ -60,12 +58,12 @@ void getinput(void) {
   miccount++;
 
   // send the value to the raspi
-  sendData(value);
+  //sendData(value);
 }
 
 
-void sendData(long sendVal) {
-  Wire.write(sendVal);
+void sendData(){//long sendVal) {
+  Wire.write(value);//sendVal);
 }
 
 void receiveData(int byteCount) {
