@@ -25,5 +25,13 @@ Choose one of the following options:
 ### Push Updated Code to Github
 
 
+<br><br>
+## Wire Connections between Teensy and Raspi
+### Teensy Pinout
+![Teensy Pinout](https://github.com/jtcostello/ClearLungProject-Hardware/blob/master/ReferenceDocs/teensy3.2pinout.png)
+### Raspi Pinout
+![Raspi Pinout](https://github.com/jtcostello/ClearLungProject-Hardware/blob/master/ReferenceDocs/raspiGPIOpinout.png)
+### I2C Connections (ignore the Arduino pin numbers)
+![I2C Setup](https://github.com/jtcostello/ClearLungProject-Hardware/blob/master/ReferenceDocs/teensy_raspi_connections.png)
 
 
