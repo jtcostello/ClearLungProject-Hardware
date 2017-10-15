@@ -1,6 +1,6 @@
 # Clear Lung Project - Hardware Subteam
 ## Project Overview
-- Current main files to use are `raspiI2Ctest.py` and `teensyAudioInRaspiOut`
+- **Current main files to use are `raspiI2Ctest.py` and `teensyAudioInRaspiOut`**
 - 10/15/17: Got I2C working between raspi and teensy, but still need to test if the right values are being sent when doing a higher speed transfer.
 
 <br><br>
